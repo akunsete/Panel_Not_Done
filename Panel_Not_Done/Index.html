@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="ShowColomn">
+        <button style="color: #3b82f6;" id="Show"><i class='bx  bx-menu'></i> </button>
+    </div>
+    <section id="Container">
+        <nav id="Navbar">
+            <div class="ContainerClose">
+                <button id="Close"><i class='bx  bx-x'></i></button>
+            </div>
+            <h2 class="Judul">PanelSurya</h2>
+            <div class="Underline"></div>
+            <ul id="ListItems">
+                <li class="Home" id="Items">Home</li>
+                <li class="EditorCode" id="Items">EditorCode</li>
+                <li class="Assistant" id="Items">Assistant</li>
+            </ul>
+        </nav>
+    </section>
+    <section id="ContainerCommand">
+        <div class="JudulContainer">
+            <h2 id="Judul">Commands</h2>
+        </div>
+        <div id="Output">
+            <div class="ContainerPlay">
+                <button id="Plays"><i class='bx  bx-play'></i></button>
+            </div>            
+            <div class="ContainerClear">
+                <button id="Clear"><i class='bx  bx-trash'></i> </button>
+            </div>
+            <div id="ChatCommandStores">
+                <p style="color: hsl(0, 100%, 50%);font-size: 14px;" class="ChatsBOT">PRESS THE GREEN BUTTON FIRST, TO ACTIVE ENGINE!!!</p>
+            </div>
+        </div>
+        <div id="ContainerInput">
+            <input type="text" id="CommandPrompt" placeholder="Command....">
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
