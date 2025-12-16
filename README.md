@@ -11,13 +11,13 @@ The main goal of this project is to strengthen fundamental front-end skills, esp
 
 ## Command System Logic
 PanelSurya supports a basic command system using arrays and condition checks.
-1)Supported commands:
-  /help → Displays a list of available commands
-  /yt → Simulates loading, then opens YouTube in a new tab
-  /roblox → Reserved for future implementation
+- Supported commands:
+  - /help → Displays a list of available commands
+  - /yt → Simulates loading, then opens YouTube in a new tab
+  - /roblox → Reserved for future implementation
 
-2)How it works:
-  User input is validated against a predefined commands array
-  Valid commands generate dynamic output messages
-  Invalid commands display an error message in red
-  All outputs are added to the DOM without refreshing the page
+- How it works:
+  - User input is validated against a predefined commands array
+  - Valid commands generate dynamic output messages
+  - Invalid commands display an error message in red
+  - All outputs are added to the DOM without refreshing the page
