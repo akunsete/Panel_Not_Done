@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar PanelSurya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+     <link rel="stylesheet" href="css/boxicons.min.css">     
+     <link rel="stylesheet" href="Custom.css">
+</head>
+<body class="bg-[#e7e7e7] font-sans m-0 p-0 box-border">
+    <div id="ContainerShow">
+        <div id="ShowColomn" class="absolute top-5 right-12.5 z-102">
+            <button id="Show" class="cursor-pointer w-10 p-3 text-[24px] bg-none border-none text-[#3b82f6]">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+    </div>
+    <section class="ContainerWarnings" id="ContainerWarnings">
+        <div id="Alerts">
+            <div class="relative grid grid-cols-2" id="CombieTwoElementAlerts">
+                <div id="LogoAlert"><img id="AlertSvg" class="w-6" src="icons/alert-circle.svg" alt="Alert"></div>
+                <div class="absolute left-[24.5px] text-[#82181A] text-sm font-medium" id="JudulAlert">Terjadi Kesalahan</div>
+            </div>
+            <div class="text-[#82181A] text-sm font-normal" id="DeksripsiAlert">Gagal menghubungkan ke server. Silakan nyalakan server Anda.</div>
+        </div>
+    </section>
+    <section id="Container" class="fixed top-0 -left-60 flex flex-col justify-center items-start transition-all duration-300 ease-in-out z-100">
+        <nav id="Navbar" class="px-17 min-h-screen bg-[#1e1e1e]">
+            <div id="ContainerClose" class="cursor-pointer absolute left-48 top-2.5 p-1.5">
+                <button id="Close" class="cursor-pointer color-[#ff0000] bg-none text-3xl border-none">
+                    <i class='bx bx-x text-red-600'></i>
+                </button>
+            </div>
+
+            <h2 id="JudulNav" class="mt-12.5 mb-2.5 text-[#fcfcfc] text-xl font-bold">PanelSurya</h2>
+            
+            <div id="Underline" class="relative w-full h-0.5 bg-[#f5f5f5]"></div>
+
+            <ul id="ListItems" class="absolute top-27 left-15 cursor-pointer mt-5 flex flex-col justify-center items-start text-[#e0e0e0] list-none font-bold text-[18px] gap-4">
+                <li id="Home" class="border-b border-white">Home</li>
+                <li id="EditorCode">EditorCode</li>
+                <li id="Assistant">Assistant</li>
+            </ul>
+        </nav>
+    </section>
+    <section class="relative hidden flex-col justify-center items-center opacity-0 scale-90 transition-all duration-300 z-100" id="ContainerRockPaperScissors">
+        <div class="absolute mt-130 grid grid-cols-3 place-items-center w-120 h-80 bg-[#fafafa] rounded-sm z-100" id="ParentsContainerRockPaperScissors">
+            <div id="ContainerClose" class="cursor-pointer absolute right-2.5 top-2.5 ">
+                <button id="CloseRPS_Menu" class="cursor-pointer color-[#ff0000] bg-none text-4xl border-none">
+                    <i class='bx bx-x text-red-600'></i>
+                </button>
+            </div>            
+            <div class="cursor-pointer absolute top-7 left-7 hidden flex-col opacity-0" id="ContainerRetry"><img src="icons/refresh-cw-alt.svg" alt=""></div>
+            <div class="absolute top-6" id="JudulRockPaperScissors">
+                <h2 class="text-2xl font-bold">Rock,Scissor,Paper</h2>
+            </div>
+            <div class="absolute hidden flex-col justify-center items-center opacity-0 z-100" id="ContainerWinOrDefeat">
+                <h2 class="text-6xl font-bold">YOU <span id="WinOrDefeat">WIN</span></h2>
+            </div>
+            <div class="cursor-pointer mt-0 relative flex flex-col justify-center items-center w-30 h-30 bg-[#e1e1e1] rounded-md opacity-100" id="ContainerRockPaperScissorsButton" data-angka="0">
+                <span class="text-4xl" id="EmojiRock">✊</span>
+            </div>
+            <div class="cursor-pointer mt-0 relative flex flex-col justify-center items-center w-30 h-30 bg-[#e1e1e1] rounded-md" id="ContainerRockPaperScissorsButton" data-angka="1">
+                <span class="text-4xl" id="EmojiScissors">✌️</span>
+            </div>
+            <div class="cursor-pointer mt-0 relative flex flex-col justify-center items-center w-30 h-30 bg-[#e1e1e1] rounded-md" id="ContainerRockPaperScissorsButton" data-angka="2">
+                <span class="text-4xl" id="EmojiPaper">✋</span>
+            </div>            
+            <div class="absolute left-46 bottom-9.5" id="ResultWinOrDie">
+                <h2 class="text-3xl font-bold">BOT: <span id="RandomRPS"></span></h2>
+            </div>
+        </div>
+    </section>
+    <section id="ContainerCommand" class="relative mt-12 flex flex-col justify-center items-center">
+        <div id="JudulContainer">
+            <h2 id="Judul" class="text-2xl font-bold">CommandPrompt</h2>
+        </div>
+
+        <div id="Output" class="relative mt-3.75 flex flex-col w-80 h-93.25 bg-[#212529] border border-gray-500 z-10 overflow-y-auto scrollbar-hide rounded-t-sm">
+            
+            <div id="ContainerPlay" class="absolute top-0 right-0 z-51">
+                <button id="Plays" class="cursor-pointer w-12.5 h-8.75 text-white font-bold text-[24px] bg-[#11df11] border-none rounded-bl-sm flex items-center justify-center">
+                    <i class='bx bx-play'></i>
+                </button>
+            </div>
+
+            <div id="ContainerClear" class="absolute top-0 left-0 z-50">
+                <button id="Clear" class="cursor-pointer w-12.5 h-8.75 text-white font-bold text-[24px] bg-red-600 border-none rounded-br-sm flex items-center justify-center">
+                    <i class='bx bx-trash'></i>
+                </button>
+            </div>
+
+            <div id="ChatCommandStores" class="absolute left-1.25 top-11.25 text-white text-[15px] font-medium">
+                <p id="ChatsBOT" class="text-[red] text-[14px]">
+                    PRESS THE GREEN BUTTON FIRST, TO ACTIVE ENGINE!!!
+                </p>
+            </div>
+        </div>
+
+        <div id="ContainerInput" class="relative z-10">
+            <input type="text" id="CommandPrompt" placeholder="Command...." 
+                class="p-2 w-80 text-white bg-[#560bad] border-none rounded-b-sm placeholder:text-white placeholder:opacity-70 focus:outline-none">
+        </div>
+    </section>
+    <section class="mt-17.5" id="ContentProsesor">
+        <div class="mb-10 flex justify-center items-center flex-col" id="JudulPromptMonitoring">
+            <h1 class="text-[#101828] text-[38px] font-bold" id="JudulPrompt">Prompt Monitoring</h1>
+            <p class="text-[#4A5565] text-[16px]" id="DeksripsiPrompt">Real-time server perfomance metrics</p>
+        </div>
+        <div class="relative m-auto mb-15 w-250 h-40 flex flex-col bg-[#FFFFFF] rounded-[10px] shadow-xl/25" id="StatusPrompt">
+            <div class="absolute top-4 left-8" id="StatusPromptContainer"><h3 class="text-[#4F4A65] text-[24px] font-medium">Status Prompt</h3></div>
+            <div class="absolute top-17.5 left-8 flex justify-center items-center w-35 h-15 text-[24px] font-bold text-[#ee0b0b] bg-[rgba(220,20,20,0.2)] rounded-4xl border-solid outline-4 outline-[rgba(209,28,28,0.45)]" id="StatusMonitoringPrompt">OFF</div>
+        </div>        
+    </section>
+    <section class="flex justify-center mt-10 " id="GridRamAndProsesor">     
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2" id="ContentsRamAndProsesor">               
+                <div class="relative w-120 h-35 bg-[#FFFFFF] rounded-[10px] shadow-xl/25" id="Ram">
+                    <div class="absolute top-4 left-4 text-[#4A5565] font-medium text-[18px]">RAM Usage</div>
+                    <div class="absolute top-4 right-4"><img class="w-7" src="icons/chip.svg" alt=""></div>
+                    <div class="absolute top-15 left-4 text-[#101828] font-medium text-[46px]" id="RamNumber"><span id="RandomNumberRam">0</span> <span class="text-[#6A7282] text-[30px]">%</span></div>
+                </div>                
+                <div class="relative w-120 h-35 bg-[#FFFFFF] rounded-[10px] shadow-xl/25" id="Prosesor">
+                    <div class="absolute top-4 left-4 text-[#4A5565] font-medium text-[18px]">Processor Usage</div>
+                    <div class="absolute top-4 right-4"><img class="w-7" src="icons/sd-card.svg" alt=""></div>
+                    <div class="absolute top-15 left-4 text-[#101828] font-medium text-[46px]" id="ProcessorNumber"><span id="RandomNumberProcesor">0</span> <span class="text-[#6A7282] text-[30px]">%</span></div>
+                </div>                    
+        </div>
+    </section>
+    <div class="mt-10"></div>
+    <style>
+        body::-webkit-scrollbar { display: none; }
+        #Output::-webkit-scrollbar { display: none; }
+        #Output { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        //Animation ScrollReveal:
+        ScrollReveal({
+        reset: false,
+        distance: '10px',
+        duration: 1000,
+        delay: 200,
+        viewFactor: 0.25,
+        cleanup: true //membersihkan style yang ditempel jadi bersih kek class= "transform: translateY(0px)" jadi gini class = ""
+        });        
+        ScrollReveal().reveal('#ContainerCommand', {
+            origin: 'bottom'
+        });
+        ScrollReveal().reveal('#ContentProsesor', {        
+            origin: 'bottom'
+        });
+        ScrollReveal().reveal('#GridRamAndProsesor', {
+            origin: 'bottom'
+        })
+    </script>
+</body>
+</html>
