@@ -22,7 +22,7 @@ PanelSurya supports a basic command system using arrays and condition checks.
   - Invalid commands display an error message in red
   - All outputs are added to the DOM without refreshing the page
 
-##Updates:
+## Updates:
   - New Game!!!
   - New update panel ui
   - Add new ui ram and cpu
